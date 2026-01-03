@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding ="UTF-8"?>
+
+<configuration>
+
+<Appenders>
+
+<console name = "console" target="SYSTEM-OUT">
+<PatternLayout Pattern = "%d{YYYY-MM-dd HH : mm : ss} [%t] %level %logger :: %M %L %msg %n">
+</PatternLayout>
+</console>
+
+<File name = "FileLogger" fileName="logs/automation.log" append="false">
+<PatternLayout Pattern = "%d{YYYY-MM-dd HH : mm : ss} [%t] %level %logger %msg %n">
+</PatternLayout>
+</File>
+
+</Appenders>
+
+<Loggers>
+<Root level = "info"> <!--what type of logs generate (All < Trace(Largest level of log, eg,loop exutions)
+ < Debug(Used for complex code to know logic) < Info("Basic information,eg,names,methods,config") 
+ < Warn(Basic warning)< Error(eg,Try/Catch) < Fatal(Thirdpartyissuess) < Off)-->
+<AppenderRef ref = "console"></AppenderRef>
+<AppenderRef ref = "File"></AppenderRef>
+</Root>
+
+
+</Loggers>
+
+</configuration>
