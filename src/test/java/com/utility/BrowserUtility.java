@@ -90,7 +90,7 @@ public abstract class BrowserUtility {
 	
 	
 	public void goToWebsite(String url) {
-		logger.info("URL is passed to chrome!!!!!");
+		logger.info("URL is passed to browser!!!!!");
 		driver.get().get(url);
 	}
 	

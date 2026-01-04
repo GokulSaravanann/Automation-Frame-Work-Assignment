@@ -14,27 +14,15 @@ import com.utility.LamdaTestUtility;
 import com.utility.LoggerUtility;
 
 public class TestBase_Before_Parameter {
-	
-	private boolean isLambdaTest = false;
-	private boolean isHeadless = true;
-	
-	protected HomePage hp;
+
+	HomePage hp;
 	Logger logger = LoggerUtility.getLogger(getClass());
 	
-	@Parameters({"browser", "isLambdaTest", "isHeadless"} )
 	@BeforeMethod(description = "ChromeDriver Launch")
-	public void setUp(String browser, boolean isLambdaTest, boolean isHeadless, ITestResult result) {
-		WebDriver lambdaDriver;
-		if(isLambdaTest) {
-			
-			lambdaDriver = LamdaTestUtility.initializeLamdaTestSession("chrome", result.getMethod().getMethodName());
-			hp = new HomePage(lambdaDriver);
-		}
-		else {
-			
+	public void setUp() {
 			logger.info("!!!ChromeDriver Launched successfully");
-			hp = new HomePage(Browser.CHROME, isHeadless);
-		}	
+	//		hp = new HomePage(Browser.CHROME);
+		
 	}
 	
 	public BrowserUtility  getInstance() {
@@ -44,11 +32,8 @@ public class TestBase_Before_Parameter {
 	@AfterMethod
 	public void tearDown() {
 		
-		if(isLambdaTest) {
-			LamdaTestUtility.quitLamdaSession(); // quits the lambda session
-		}else {
-			hp.quit(); //quits the local session
-		}
+		hp.quit(); //quits the local session
+		
 	}
 	
 
