@@ -29,8 +29,6 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
-    - name: setup chrome
-      uses: browser-actions/setup-chrome@v1
     - name: Running Test Automation Framework
       run: mvn test -X 
     - name: Upload Test Logs
