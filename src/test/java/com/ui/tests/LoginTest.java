@@ -4,6 +4,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.ui.pojo.User;
+
 
 
 
@@ -15,7 +17,8 @@ public class LoginTest extends TestBase {
 	
 	
 
-	@Test(description = "Login test", retryAnalyzer = com.ui.listeners.MyRetryAnalyzer.class)
+//	@Test(description = "Login test", retryAnalyzer = com.ui.listeners.MyRetryAnalyzer.class)
+	@Test(description = "Login test")
 	public  void loginTest() {
 		
 	
@@ -27,6 +30,8 @@ public class LoginTest extends TestBase {
 		
 		
 	}
+	
+
 
 
 }

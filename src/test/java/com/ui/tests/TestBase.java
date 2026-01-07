@@ -46,7 +46,7 @@ public class TestBase {
 		return hp;
 	}
 	
-	@AfterMethod
+	//@AfterMethod
 	public void tearDown() {
 		
 		if(isLambdaTest) {

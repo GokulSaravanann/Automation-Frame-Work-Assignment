@@ -5,10 +5,6 @@ public class User {
 	private String password;
 	
 	
-	/**
-	 * @param emailAddress
-	 * @param password
-	 */
 	public User(String emailAddress, String password) {
 		super();
 		this.emailAddress = emailAddress;

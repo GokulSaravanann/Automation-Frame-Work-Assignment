@@ -2,12 +2,22 @@
 
 <suite name ="Automation Practice" parallel = "methods" thread-count = "8" verbose="1">
   <test name="UI Automation">
-    <classes>
-       <class name="com.ui.tests.LoginTest"/>
+    
        <parameter name = "browser" value = "${browser}"/>
        <parameter name = "isLambdaTest" value = "${isLambdaTest}"/>
        <parameter name = "isHeadless" value = "${isHeadless}"/>
+       
+       <classes>
+       <class name="com.ui.tests.LoginTest"/>
+       <class name="com.ui.tests.LoginTestCSV"/>
+       <class name="com.ui.tests.LoginTestExcel"/>
+       <class name="com.ui.tests.InvalidLoginTest"/>
+       <class name="com.ui.tests.SearchProductTest"/>
+       <class name="com.ui.tests.AddNewAddressTest"/>
+       <class name="com.ui.tests.CheckOutTest"/>
+         
     </classes>
+    	
   </test>
 
   

@@ -30,7 +30,7 @@
          <systemPropertyVariables>
             <browser>chrome</browser>
             <isLambdaTest>false</isLambdaTest>
-            <isHeadless>true</isHeadless>
+            <isHeadless>false</isHeadless>
           </systemPropertyVariables>
         </configuration>
       </plugin>
@@ -99,6 +99,12 @@
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
     <version>5.1.2</version>
+</dependency>
+
+<dependency>
+    <groupId>com.github.javafaker</groupId>
+    <artifactId>javafaker</artifactId>
+    <version>1.0.2</version>
 </dependency>
 
   </dependencies>

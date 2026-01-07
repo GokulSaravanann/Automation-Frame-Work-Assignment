@@ -24,7 +24,7 @@ public class LoginDataProvider {
 	
 	//Data provider should always return either object[] or object[][] or iterator
 	@DataProvider
-	public Iterator<Object[]> loginDataProvider() throws FileNotFoundException {
+	public Iterator<Object[]> loginJSONDataProvider() throws FileNotFoundException {
 		
 		Gson gson = new Gson();
 		File file = new File(System.getProperty("user.dir")+"\\testData\\LoginData.Json");
